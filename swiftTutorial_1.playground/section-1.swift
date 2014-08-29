@@ -8,9 +8,9 @@ let priceIntInferred = -19
 let priceIntExpLicit = -19
 
 let priceDoubleInterred = -19.99
-let priceDoubleExpLicit:Double = -19.99
+let priceDoubleExpLicit:Double = -19.99 //ประกาศตัวแปรแบบบอก ชนิดของตัวแปร
 
-let priceFloatInterred = -19.99
+let priceFloatInterred = 19.99
 let priceFloatExpLicit:Float = -19.99
 
 let onSaleInterred = true
@@ -19,9 +19,13 @@ let onSaleExpLicit = false
 let nameInterred = "Whoopie Cushion"
 let nameExpLicit:String = "Whoopie Cushion"
 
+if(true){
+    println("\(nameInterred) on sale for\(priceFloatInterred)!")
+}
+
 
 //Array ********************************
-var shoppingListExplicit = [String]()
+var shoppingListExplicit = [String]() //สร้างตัวแปร array ชนิด String
 shoppingListExplicit = ["Eggs", "Milk"]
 //var shoppingListExplicit:[String] = ["Eggs", "Milk"]
 

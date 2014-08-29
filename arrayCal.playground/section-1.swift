@@ -7,13 +7,13 @@ class TipCalculator{
     
     //3
     init(total:Double, taxPct:Double){
-        self.total = total
+        self.total = total //self ใช้ในกรณีที่ชื่อซ้ำกัน
         self.taxPct = taxPct
         subTotal = total / (taxPct + 1)
     }
     
     //4
-    func calcTipWithTipPct(tipPct:Double) -> Double{
+    func calcTipWithTipPct(tipPct:Double) -> Double{ // -> คือการ return ค่า (บอกชนิดของตัวแปรที่ return
         return subTotal * tipPct
     }
     
