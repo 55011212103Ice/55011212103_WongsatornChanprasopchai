@@ -1,18 +1,20 @@
 class zoo{
     
-    let food:String
     let animal:String
-    var animalFood: [String:String] = ["dog": "pedigree", "cat": "abc"]
+    let food:String
+    var animalFood: [String:String]
     
     init(animal:String, food:String){
         self.animal = animal
         self.food = food
+        
+        animalFood = [animal:food]
     }
     
-    func addAnimal() -> [String:Sting] {
-        
+    func addAnimal(animal:String, food:String){
+        animalFood[animal] = food
     }
     
     
 }
-let animal = zoo(
+let animal = zoo(animal: "cat", food: "Me-O")
