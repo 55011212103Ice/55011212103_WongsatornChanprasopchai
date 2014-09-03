@@ -13,7 +13,7 @@ class TipCalculator{
     }
     
     //4
-    func calcTipWithTipPct(tipPct:Double) -> Double{ // -> คือการ return ค่า (บอกชนิดของตัวแปรที่ return
+    func calcTipWithTipPct(tipPct:Double) -> Double{ // -> คือการ return ค่า (บอกชนิดของตัวแปรที่ return)
         return subTotal * tipPct
     }
     
