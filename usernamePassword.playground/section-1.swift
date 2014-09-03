@@ -23,7 +23,7 @@ class usernamePassword{
     
     func showAllUser(){
         for (showUser,showPass) in userAndPass {
-            println("user: \(showUser) & pass: \(showPass)")
+            println("\nuser: \(showUser)  \npass: \(showPass)")
      
         }
         
