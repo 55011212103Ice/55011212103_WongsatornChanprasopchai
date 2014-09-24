@@ -14,24 +14,10 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "3F090B4E19D2B22D00D99AC7"
-               BuildableName = "lab4.app"
-               BlueprintName = "lab4"
-               ReferencedContainer = "container:lab4.xcodeproj">
-            </BuildableReference>
-         </BuildActionEntry>
-         <BuildActionEntry
-            buildForTesting = "YES"
-            buildForRunning = "YES"
-            buildForProfiling = "NO"
-            buildForArchiving = "NO"
-            buildForAnalyzing = "YES">
-            <BuildableReference
-               BuildableIdentifier = "primary"
-               BlueprintIdentifier = "3F090B6319D2B22D00D99AC7"
-               BuildableName = "lab4Tests.xctest"
-               BlueprintName = "lab4Tests"
-               ReferencedContainer = "container:lab4.xcodeproj">
+               BlueprintIdentifier = "3F0AB7E319C2C82A00317504"
+               BuildableName = "tipCalculator.app"
+               BlueprintName = "tipCalculator"
+               ReferencedContainer = "container:tipCalculator.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
       </BuildActionEntries>
@@ -46,20 +32,20 @@
             skipped = "NO">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "3F090B6319D2B22D00D99AC7"
-               BuildableName = "lab4Tests.xctest"
-               BlueprintName = "lab4Tests"
-               ReferencedContainer = "container:lab4.xcodeproj">
+               BlueprintIdentifier = "3F0AB7F519C2C82A00317504"
+               BuildableName = "tipCalculatorTests.xctest"
+               BlueprintName = "tipCalculatorTests"
+               ReferencedContainer = "container:tipCalculator.xcodeproj">
             </BuildableReference>
          </TestableReference>
       </Testables>
       <MacroExpansion>
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "3F090B4E19D2B22D00D99AC7"
-            BuildableName = "lab4.app"
-            BlueprintName = "lab4"
-            ReferencedContainer = "container:lab4.xcodeproj">
+            BlueprintIdentifier = "3F0AB7E319C2C82A00317504"
+            BuildableName = "tipCalculator.app"
+            BlueprintName = "tipCalculator"
+            ReferencedContainer = "container:tipCalculator.xcodeproj">
          </BuildableReference>
       </MacroExpansion>
    </TestAction>
@@ -75,10 +61,10 @@
       <BuildableProductRunnable>
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "3F090B4E19D2B22D00D99AC7"
-            BuildableName = "lab4.app"
-            BlueprintName = "lab4"
-            ReferencedContainer = "container:lab4.xcodeproj">
+            BlueprintIdentifier = "3F0AB7E319C2C82A00317504"
+            BuildableName = "tipCalculator.app"
+            BlueprintName = "tipCalculator"
+            ReferencedContainer = "container:tipCalculator.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
       <AdditionalOptions>
@@ -93,10 +79,10 @@
       <BuildableProductRunnable>
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "3F090B4E19D2B22D00D99AC7"
-            BuildableName = "lab4.app"
-            BlueprintName = "lab4"
-            ReferencedContainer = "container:lab4.xcodeproj">
+            BlueprintIdentifier = "3F0AB7E319C2C82A00317504"
+            BuildableName = "tipCalculator.app"
+            BlueprintName = "tipCalculator"
+            ReferencedContainer = "container:tipCalculator.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
    </ProfileAction>

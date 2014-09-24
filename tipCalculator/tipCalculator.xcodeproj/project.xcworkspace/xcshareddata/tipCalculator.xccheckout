@@ -5,16 +5,16 @@
 	<key>IDESourceControlProjectFavoriteDictionaryKey</key>
 	<false/>
 	<key>IDESourceControlProjectIdentifier</key>
-	<string>709B31FD-0731-4868-9E0C-6E075ED2574E</string>
+	<string>18735E25-36C7-42D2-A898-C760A4C83371</string>
 	<key>IDESourceControlProjectName</key>
-	<string>lab4</string>
+	<string>tipCalculator</string>
 	<key>IDESourceControlProjectOriginsDictionary</key>
 	<dict>
 		<key>63F6D50DCCC909B1C616D3F62AA6E7163E347DAD</key>
 		<string>https://github.com/55011212103Ice/55011212103_WongsatornChanprasopchai.git</string>
 	</dict>
 	<key>IDESourceControlProjectPath</key>
-	<string>lab4/lab4.xcodeproj</string>
+	<string>tipCalculator/tipCalculator.xcodeproj</string>
 	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
 	<dict>
 		<key>63F6D50DCCC909B1C616D3F62AA6E7163E347DAD</key>
