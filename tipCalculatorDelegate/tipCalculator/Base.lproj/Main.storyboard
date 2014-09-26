@@ -65,15 +65,10 @@
                                     <action selector="calculateTapped:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="4pQ-y2-xjv"/>
                                 </connections>
                             </button>
-                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" editable="NO" text="WongsatornC" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="k8h-La-l54">
-                                <rect key="frame" x="27" y="207" width="266" height="228"/>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" translatesAutoresizingMaskIntoConstraints="NO" id="Tr2-HV-5ZP">
+                                <rect key="frame" x="0.0" y="224" width="320" height="344"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
-                                <variation key="widthClass=compact" fixedFrame="YES">
-                                    <rect key="frame" x="20" y="181" width="360" height="185"/>
-                                </variation>
-                            </textView>
+                            </tableView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <gestureRecognizers/>
@@ -85,7 +80,7 @@
                     <simulatedOrientationMetrics key="simulatedOrientationMetrics"/>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
                     <connections>
-                        <outlet property="resultsTextView" destination="k8h-La-l54" id="VSn-ab-ncx"/>
+                        <outlet property="tableView" destination="Tr2-HV-5ZP" id="7tj-f5-sfZ"/>
                         <outlet property="taxPctLabel" destination="I2v-TG-EHn" id="R7u-cr-5tr"/>
                         <outlet property="taxPctSlider" destination="BZB-Ts-1kR" id="WCU-qn-nMJ"/>
                         <outlet property="totalTextField" destination="N12-5H-i10" id="hJW-8B-Qmh"/>
