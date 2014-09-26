@@ -51,6 +51,7 @@
                     <connections>
                         <outlet property="inputName" destination="J6p-5S-ey4" id="tys-x3-e6z"/>
                         <outlet property="listName" destination="XOT-nW-Vrc" id="NDt-HQ-XBM"/>
+                        <outlet property="tableView" destination="XOT-nW-Vrc" id="AP5-3z-zq9"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="x5A-6p-PRh" sceneMemberID="firstResponder"/>

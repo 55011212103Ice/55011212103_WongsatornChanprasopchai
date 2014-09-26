@@ -12,17 +12,12 @@ class ViewController: UIViewController, UITableViewDelegate {
 
     @IBOutlet var listName: UITableView!
     @IBOutlet var inputName: UITextField!
+    @IBOutlet var tableView: UITableView!
     
-    var  listStudent = ""
+    var lName = ["a", "b", "c", "d"]
+    let cellIdentifier = "cellIdentiier"
     
     @IBAction func bOK(sender: AnyObject) {
-        let alert = UIAlertController(title: "Success", message: "Add name \(inputName.text) Success", preferredStyle: UIAlertControllerStyle.Alert)
-        alert.addAction(UIAlertAction(title: "OK", style: UIAlertActionStyle.Default, handler: { (alert: UIAlertAction!) in
-            println("An alert of type \(alert.style.hashValue) was tapped!")
-        }))
-        self.presentViewController(alert, animated: true, completion: nil)
-        inputName.text = ""
-        
         
         
     }
@@ -31,11 +26,31 @@ class ViewController: UIViewController, UITableViewDelegate {
     }
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        self.tableView.registerClass(UITableViewCell.self, forCellReuseIdentifier: self.cellIdentifier)
     }
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
     }
     
 
+    // DataSource Method
+    func numberOfSectionsInTableView(tableView: UITableView) -> Int {
+        return 1
+    }
+    func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return lName.count
+    }
+    func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
+        var cell = tableView.dequeueReusableCellWithIdentifier(self.cellIdentifier) as UITableViewCell
+        
+        cell.textLabel!.text = lName[indexPath.row]
+        return cell
+    }
+    
+    //UITableViewDelegate method
+    func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath!) {
+        
+    }
 }
 
