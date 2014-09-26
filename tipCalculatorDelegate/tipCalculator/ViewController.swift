@@ -13,23 +13,18 @@ class ViewController: UIViewController, UITableViewDelegate {
     @IBOutlet var totalTextField : UITextField!
     @IBOutlet var taxPctSlider : UISlider!
     @IBOutlet var taxPctLabel : UILabel!
-    @IBOutlet var resultsTextView : UITextView!
     @IBOutlet var tableView: UITableView!
     
     let tipCalc = tipCalculatorModel(total: 33.25, taxPct: 0.06)
     var possibleTips = Dictionary<Int, (tipAmt:Double, total:Double)>()
     var sortedKeys:[Int] = []
-    
     let cellIdentifier = "cellIdentifier"
                             
     @IBAction func calculateTapped(sender: AnyObject) {
         tipCalc.total = Double((totalTextField.text as NSString).doubleValue)
-        let possibleTips = tipCalc.returnPossibleTips()
-        var results = ""
-        for(tipPct, tipValue) in possibleTips{
-            results += "\(tipPct)%: \(tipValue)\n"
-            //resultsTextView.text = results
-        }
+        possibleTips = tipCalc.returnPossibleTips()
+        sortedKeys = sorted(Array(possibleTips.keys))
+        tableView.reloadData()
     }
     
     @IBAction func taxPercentageChanged(sender: AnyObject) {
@@ -60,15 +55,15 @@ class ViewController: UIViewController, UITableViewDelegate {
     
     
     // DataSource Method
-    func numberOfSectionsInTableView(tableView: UITableView!) ->Int{
-        return 1
-    }
-    func TableView(tableView: UITableView!, numberOfRowsInSection section: Int) -> Int{
+    func tableView(tableView: UITableView!, numberOfRowsInSection section: Int) -> Int{
         return sortedKeys.count
     }
-    func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
+        func numberOfSectionsInTableView(tableView: UITableView!) ->Int{
+            return 1
+        }
+        func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath!) {
         
-    }
+        }
     func tableView(tableView: UITableView!, cellForRowAtIndexPath indexPath: NSIndexPath!) -> UITableViewCell!{
         var cell = UITableViewCell(style: UITableViewCellStyle.Value2, reuseIdentifier: nil)
         
