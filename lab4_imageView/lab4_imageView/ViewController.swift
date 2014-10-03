@@ -37,7 +37,8 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
     @IBAction func amoutSliderValueChanged(sender: UISlider) {
         let sliderValue = sender.value
         let outputImage = self.oldPhoto(beginImage, withAmount: sliderValue)
-        let cgimg = context.createCGImage(outputImage, fromRect:outputImage.extent())
+        
+        let cgimg = context.createCGImage(outputImage, fromRect: outputImage.extent())
         let newImage = UIImage(CGImage: cgimg, scale:1, orientation:orientation)
         self.imageView.image = newImage
         
