@@ -37,9 +37,8 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
     @IBAction func amoutSliderValueChanged(sender: UISlider) {
         let sliderValue = sender.value
         let outputImage = self.oldPhoto(beginImage, withAmount: sliderValue)
-        
         let cgimg = context.createCGImage(outputImage, fromRect: outputImage.extent())
-        let newImage = UIImage(CGImage: cgimg, scale:1, orientation:orientation)
+        let newImage = UIImage(CGImage: cgimg, scale: 1, orientation: orientation)
         self.imageView.image = newImage
         
     }
@@ -71,12 +70,12 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
-    func imagePickerController(picker: UIImagePickerController, didFinishPickingMediaWithInfo info: NSDictionary!) {
+    func imagePickerController(picker: UIImagePickerController!, didFinishPickingMediaWithInfo info: NSDictionary!) {
         self.dismissViewControllerAnimated(true, completion: nil)
         let gotImage = info[UIImagePickerControllerOriginalImage] as UIImage
         
-        let beginImage = CIImage(image: gotImage)
-        let orientation = gotImage.imageOrientation
+        beginImage = CIImage(image: gotImage)
+        orientation = gotImage.imageOrientation
         filter.setValue(beginImage, forKey: kCIInputImageKey)
         self.amoutSliderValueChanged(amountSlider)
     }
@@ -91,7 +90,7 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
     }
     func oldPhoto(img:CIImage, withAmount intensity:Float) ->CIImage{
         //1
-        let sepia = CIFilter(name:"CISepeaTone")
+        let sepia = CIFilter(name:"CISepiaTone")
         sepia.setValue(img, forKey: kCIInputImageKey)
         sepia.setValue(intensity, forKey:"inputIntensity")
         //2
