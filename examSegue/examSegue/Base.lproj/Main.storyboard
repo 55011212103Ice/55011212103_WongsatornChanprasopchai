@@ -16,12 +16,6 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Unknown" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="FNa-R1-nZB">
-                                <rect key="frame" x="42" y="140" width="76" height="62"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
                             <navigationBar contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="tfW-9r-Pwj">
                                 <rect key="frame" x="0.0" y="64" width="375" height="44"/>
                                 <items>
@@ -34,6 +28,12 @@
                                     </navigationItem>
                                 </items>
                             </navigationBar>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="WongsatornC." textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="FNa-R1-nZB">
+                                <rect key="frame" x="132" y="156" width="110" height="62"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                     </view>
@@ -62,7 +62,7 @@
                             <navigationBar contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="cP2-v8-eGL">
                                 <rect key="frame" x="0.0" y="64" width="375" height="44"/>
                                 <items>
-                                    <navigationItem title="Title" id="BSr-uH-YBH">
+                                    <navigationItem title="Two" id="BSr-uH-YBH">
                                         <barButtonItem key="rightBarButtonItem" title="Save" id="qPx-yI-Ppo">
                                             <connections>
                                                 <action selector="saveColor:" destination="Ef8-wC-ufy" id="k0C-z0-7oI"/>
@@ -71,33 +71,39 @@
                                     </navigationItem>
                                 </items>
                             </navigationBar>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="yKT-fT-apf">
-                                <rect key="frame" x="51" y="289" width="273" height="84"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5Yt-yU-w6M">
-                                <rect key="frame" x="51" y="159" width="30" height="30"/>
+                                <rect key="frame" x="172" y="314" width="30" height="30"/>
                                 <state key="normal" title="Red">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
-                                    <action selector="colorSelectionButton:" destination="Ef8-wC-ufy" eventType="touchUpInside" id="IMN-6Q-s3E"/>
+                                    <action selector="colorSelectionButton:" destination="Ef8-wC-ufy" eventType="touchUpInside" id="5ea-Ub-SfJ"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="VWn-8E-oDA">
-                                <rect key="frame" x="293" y="159" width="31" height="30"/>
+                                <rect key="frame" x="172" y="412" width="31" height="30"/>
                                 <state key="normal" title="Blue">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
+                                <connections>
+                                    <action selector="colorSelectionButton:" destination="Ef8-wC-ufy" eventType="touchUpInside" id="Rrw-Pk-Wml"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vdn-Zl-Fef">
-                                <rect key="frame" x="171" y="159" width="42" height="30"/>
+                                <rect key="frame" x="166" y="362" width="42" height="30"/>
                                 <state key="normal" title="Green">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
+                                <connections>
+                                    <action selector="colorSelectionButton:" destination="Ef8-wC-ufy" eventType="touchUpInside" id="49k-Ih-eme"/>
+                                </connections>
                             </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Unknow" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="yKT-fT-apf">
+                                <rect key="frame" x="51" y="151" width="273" height="84"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
