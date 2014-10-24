@@ -17,8 +17,11 @@ class ViewController: UIViewController, ColorTwoViewControllerDelegate {
     }
     
     func myVCDidFinish(controller: colorTwoViewController, text: String){
+        
         colorLabel.text = "Co: " + text
+        
         controller.navigationController?.popViewControllerAnimated(true);
+        // ให้ปิดหน้า colorTwoViewController
     }
     
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {

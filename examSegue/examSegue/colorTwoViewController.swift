@@ -16,9 +16,11 @@ class colorTwoViewController: UIViewController {
     var delegate:ColorTwoViewControllerDelegate? = nil
     var colorString = ""
 
+    @IBOutlet var inputName: UITextField!
     @IBAction func colorSelectionButton(sender: UIButton) {
-        colorLabel.text = sender.titleLabel!.text!
+        colorLabel.text = "\(sender.titleLabel!.text!)"
         println("\(colorLabel.text)")
+        println("")
         if(colorLabel.text == "Red"){
             colorLabel.textColor = UIColor.redColor()
         }
@@ -28,15 +30,12 @@ class colorTwoViewController: UIViewController {
         else if(colorLabel.text == "Blue"){
             colorLabel.textColor = UIColor.blueColor()
         }
-        
-        
     }
     
     @IBAction func saveColor(sender: AnyObject) {        
         if(delegate != nil){
             delegate!.myVCDidFinish(self, text: colorLabel!.text!)
         }
-        
     }
     
     @IBOutlet var colorLabel: UILabel!
