@@ -16,9 +16,9 @@ class ViewController: UIViewController, ColorTwoViewControllerDelegate {
         // Do any additional setup after loading the view, typically from a nib.
     }
     
-    func myVCDidFinish(controller: colorTwoViewController, text: String){
+    func myVCDidFinish(controller: colorTwoViewController, text: String, name: String){
         
-        colorLabel.text = "Co: " + text
+        colorLabel.text = "NAME: " + name + "\n\n FAVORITE COLOR: " + text
         
         controller.navigationController?.popViewControllerAnimated(true);
         // ให้ปิดหน้า colorTwoViewController

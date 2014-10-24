@@ -8,7 +8,7 @@
 
 import UIKit
 protocol ColorTwoViewControllerDelegate{
-    func myVCDidFinish(controller: colorTwoViewController, text:String)
+    func myVCDidFinish(controller: colorTwoViewController, text:String, name:String)
 }
 
 class colorTwoViewController: UIViewController {
@@ -17,6 +17,7 @@ class colorTwoViewController: UIViewController {
     var colorString = ""
 
     @IBOutlet var inputName: UITextField!
+    
     @IBAction func colorSelectionButton(sender: UIButton) {
         colorLabel.text = "\(sender.titleLabel!.text!)"
         println("\(colorLabel.text)")
@@ -32,9 +33,9 @@ class colorTwoViewController: UIViewController {
         }
     }
     
-    @IBAction func saveColor(sender: AnyObject) {        
+    @IBAction func saveColor(sender: AnyObject) {
         if(delegate != nil){
-            delegate!.myVCDidFinish(self, text: colorLabel!.text!)
+            delegate!.myVCDidFinish(self, text: colorLabel!.text!, name: inputName!.text!)
         }
     }
     
