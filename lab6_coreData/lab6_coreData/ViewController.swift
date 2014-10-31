@@ -17,11 +17,17 @@ class ViewController: UIViewController, UITableViewDataSource {
     @IBAction func addItem(sender: AnyObject) {
         var alert = UIAlertController(title: "New item", message: "Add a new item", preferredStyle: .Alert)
         
-        let saveAction = UIAlertAction(title: "Save", style: .Default){
+        
+        
+        let saveAction = UIAlertAction(title: "save", style: .Default){
             (action:UIAlertAction!) -> Void in
                 let textField = alert.textFields![0] as UITextField
+            
                 self.saveName(textField.text)
+                println(textField.text)
+            
                 self.tableView.reloadData()
+            
         }
         
         let cancelAction = UIAlertAction(title: "cancel", style: .Default){
@@ -50,7 +56,26 @@ class ViewController: UIViewController, UITableViewDataSource {
         // Dispose of any resources that can be recreated.
     }
     
-    //Data Source method
+//    override func viewWillAppear(animated: Bool) {
+//        //1 
+//        let appDelegate = UIApplication.sharedApplication().delegate as AppDelegate
+//        let managedContext = appDelegate.managedObjectContext!
+//        //2
+//        let fetchRequest = NSFetchRequest(entityName: "Item")
+//        //3
+//        var error: NSError?
+//        let fetchedResults = managedContext.executeFetchRequest(fetchRequest, error: &error) as [NSManagedObject]?
+//        
+//        if let results = fetchedResults{
+//            items = results
+//        }else {
+//            println("Could not fetch \(error), \(error!.userInfo)")
+//        }
+//    }
+    
+    
+    
+//    Data Source method
     func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return items.count
     }
@@ -69,18 +94,19 @@ class ViewController: UIViewController, UITableViewDataSource {
         let managedContext = appDelegate.managedObjectContext!
         //2
         let entity = NSEntityDescription.entityForName("Item", inManagedObjectContext: managedContext)
-        
         let item = NSManagedObject(entity: entity!, insertIntoManagedObjectContext: managedContext)
-        //3 
+        //3
         item.setValue(name, forKey: "name")
         //4
-        var error:NSError?
+        var error: NSError?
         if !managedContext.save(&error){
             println("Could not save \(error), \(error?.userInfo)")
         }
-        //5 
+        //5
         items.append(item)
+        
     }
+    
 
 
 }
