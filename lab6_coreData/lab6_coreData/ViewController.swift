@@ -15,19 +15,15 @@ class ViewController: UIViewController, UITableViewDataSource {
     @IBOutlet var tableView: UITableView!
     
     @IBAction func addItem(sender: AnyObject) {
-        var alert = UIAlertController(title: "New item", message: "Add a new item", preferredStyle: .Alert)
         
+        var alert = UIAlertController(title: "New item", message: "Add a new item", preferredStyle: .Alert)
         
         
         let saveAction = UIAlertAction(title: "save", style: .Default){
             (action:UIAlertAction!) -> Void in
                 let textField = alert.textFields![0] as UITextField
-            
                 self.saveName(textField.text)
-                println(textField.text)
-            
                 self.tableView.reloadData()
-            
         }
         
         let cancelAction = UIAlertAction(title: "cancel", style: .Default){
@@ -45,9 +41,10 @@ class ViewController: UIViewController, UITableViewDataSource {
     }
 
     override func viewDidLoad() {
+        super.viewDidLoad()
         title = "\"Shopping List\""
         tableView.registerClass(UITableViewCell.self, forCellReuseIdentifier: "Cell")
-        super.viewDidLoad()
+        
         // Do any additional setup after loading the view, typically from a nib.
     }
 
@@ -103,8 +100,7 @@ class ViewController: UIViewController, UITableViewDataSource {
             println("Could not save \(error), \(error?.userInfo)")
         }
         //5
-        items.append(item)
-        
+        items.append(item)        
     }
     
 
