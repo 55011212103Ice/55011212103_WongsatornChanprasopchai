@@ -38,6 +38,8 @@ class ViewController: UIViewController, UITableViewDataSource {
         alert.addAction(cancelAction)
         
         presentViewController(alert, animated: true, completion: nil)
+        
+        
     }
 
     override func viewDidLoad() {
@@ -47,28 +49,23 @@ class ViewController: UIViewController, UITableViewDataSource {
         
         // Do any additional setup after loading the view, typically from a nib.
     }
-
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
-    }
     
-//    override func viewWillAppear(animated: Bool) {
-//        //1 
-//        let appDelegate = UIApplication.sharedApplication().delegate as AppDelegate
-//        let managedContext = appDelegate.managedObjectContext!
-//        //2
-//        let fetchRequest = NSFetchRequest(entityName: "Item")
-//        //3
-//        var error: NSError?
-//        let fetchedResults = managedContext.executeFetchRequest(fetchRequest, error: &error) as [NSManagedObject]?
-//        
-//        if let results = fetchedResults{
-//            items = results
-//        }else {
-//            println("Could not fetch \(error), \(error!.userInfo)")
-//        }
-//    }
+    override func viewWillAppear(animated: Bool) {
+        //1 
+        let appDelegate = UIApplication.sharedApplication().delegate as AppDelegate
+        let managedContext = appDelegate.managedObjectContext!
+        //2
+        let fetchRequest = NSFetchRequest(entityName: "Item")
+        //3
+        var error: NSError?
+        let fetchedResults = managedContext.executeFetchRequest(fetchRequest, error: &error) as [NSManagedObject]?
+        
+        if let results = fetchedResults{
+            items = results
+        }else {
+            println("Could not fetch \(error), \(error!.userInfo)")
+        }
+    }
     
     
     
@@ -102,6 +99,15 @@ class ViewController: UIViewController, UITableViewDataSource {
         //5
         items.append(item)        
     }
+    
+    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
+        self.tableView.reloadData()
+    }
+    func myVCDid(controller: addMemberViewController, text: String){
+        controller
+    }
+    
+    
     
 
 

@@ -9,6 +9,11 @@
 import UIKit
 
 class ViewController: UIViewController {
+    
+    @IBOutlet var tableView: UITableView!
+    @IBAction func addMember(sender: AnyObject) {
+    }
+    
 
     override func viewDidLoad() {
         super.viewDidLoad()
