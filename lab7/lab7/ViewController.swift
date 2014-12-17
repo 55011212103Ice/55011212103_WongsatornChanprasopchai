@@ -88,6 +88,7 @@ class ViewController: UIViewController, UICollisionBehaviorDelegate {
     override func touchesEnded(touches: NSSet, withEvent event: UIEvent) {
         if(snap != nil){
             animator.removeBehavior(snap)
+            
         }
         let touch = touches.anyObject() as UITouch
         snap = UISnapBehavior(item: square, snapToPoint: touch.locationInView(view))

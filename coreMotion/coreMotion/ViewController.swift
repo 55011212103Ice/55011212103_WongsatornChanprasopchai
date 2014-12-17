@@ -15,8 +15,6 @@ class ViewController: UIViewController {
 	// Core Audio
 	
 	var audio1 = AVAudioPlayer()
-	var audio2 = AVAudioPlayer()
-	var audio3 = AVAudioPlayer()
 	
 		@IBAction func stop(sender: AnyObject) {
 		coreAudio()
@@ -39,17 +37,20 @@ class ViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
 	
+	
 	// MARK: core data
 	func coreAudio(){
 		var url1 = NSURL(fileURLWithPath: NSBundle.mainBundle().pathForResource("sound2", ofType: "mp3")!)
-		var url2 = NSURL(fileURLWithPath: NSBundle.mainBundle().pathForResource("sound2", ofType: "mp3")!)
 		
 		var error: NSError?
 		
 		audio1 = AVAudioPlayer(contentsOfURL: url1, error: &error)
 		audio1.prepareToPlay()
+	}
+	
+	func coreMotion(){
 		
-		audio2 = AVAudioPlayer(contentsOfURL: url2, error: &error)
-		audio2.prepareToPlay()
+		
+	
 	}
 }
